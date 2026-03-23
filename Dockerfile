@@ -13,4 +13,4 @@ RUN mkdir -p uploads/fuel_receipts && chmod -R 777 uploads
 
 EXPOSE 8080
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "."]
+CMD php -S 0.0.0.0:$PORT -t .
