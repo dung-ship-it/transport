@@ -1,1 +1,11 @@
 DirectoryIndex login.php
+
+RewriteEngine On
+
+# Redirect root / to login.php
+RewriteRule ^$ /login.php [R=302,L]
+
+# If the requested file/directory doesn't exist, redirect to login.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ /login.php [R=302,L]
