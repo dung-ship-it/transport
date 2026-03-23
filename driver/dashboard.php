@@ -4,7 +4,7 @@ require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
 if (!hasRole('driver')) {
-    header('Location: /transport/dashboard.php'); exit;
+    header('Location: /dashboard.php'); exit;
 }
 
 $pageTitle = 'Trang chủ';
@@ -179,7 +179,7 @@ $statusLabels = [
         </div>
         <div class="d-flex gap-2 align-items-center">
             <span class="badge bg-success">🚗 Lái Xe</span>
-            <a href="/transport/logout.php" class="text-white opacity-75">
+            <a href="/logout.php" class="text-white opacity-75">
                 <i class="fas fa-sign-out-alt"></i>
             </a>
         </div>
@@ -313,7 +313,7 @@ $statusLabels = [
     <div class="driver-card text-center py-3">
         <div style="font-size:2.5rem">😴</div>
         <div class="text-muted mt-1">Không có chuyến nào hôm nay</div>
-        <a href="/transport/driver/trip_create.php" class="btn btn-primary btn-sm mt-2 rounded-pill">
+        <a href="/driver/trip_create.php" class="btn btn-primary btn-sm mt-2 rounded-pill">
             + Tạo chuyến mới
         </a>
     </div>
@@ -324,7 +324,7 @@ $statusLabels = [
         $from = $trip['pickup_location']  ?? $trip['route_from'] ?? '';
         $to   = $trip['dropoff_location'] ?? $trip['route_to']   ?? '';
     ?>
-    <a href="/transport/driver/trip_detail.php?id=<?= $trip['id'] ?>" class="text-decoration-none">
+    <a href="/driver/trip_detail.php?id=<?= $trip['id'] ?>" class="text-decoration-none">
         <div class="trip-card status-<?= $trip['status'] ?>">
             <div class="d-flex justify-content-between align-items-start mb-2">
                 <code class="text-primary fw-bold"><?= htmlspecialchars($trip['trip_code']) ?></code>
@@ -361,7 +361,7 @@ $statusLabels = [
         $from = $trip['pickup_location']  ?? $trip['route_from'] ?? '';
         $to   = $trip['dropoff_location'] ?? $trip['route_to']   ?? '';
     ?>
-    <a href="/transport/driver/trip_detail.php?id=<?= $trip['id'] ?>" class="text-decoration-none">
+    <a href="/driver/trip_detail.php?id=<?= $trip['id'] ?>" class="text-decoration-none">
         <div class="trip-card" style="border-left-color:#6c757d">
             <div class="d-flex justify-content-between align-items-center mb-1">
                 <code class="text-secondary"><?= htmlspecialchars($trip['trip_code']) ?></code>
@@ -391,7 +391,7 @@ $statusLabels = [
     </div>
     <div class="row g-2 mb-3">
         <div class="col-6">
-            <a href="/transport/driver/ot_request.php" class="text-decoration-none">
+            <a href="/driver/ot_request.php" class="text-decoration-none">
                 <div class="driver-card d-flex align-items-center gap-2 py-2 px-3">
                     <div style="font-size:1.8rem">⏱️</div>
                     <div>
@@ -410,7 +410,7 @@ $statusLabels = [
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/leave_request.php" class="text-decoration-none">
+            <a href="/driver/leave_request.php" class="text-decoration-none">
                 <div class="driver-card d-flex align-items-center gap-2 py-2 px-3">
                     <div style="font-size:1.8rem">🏖️</div>
                     <div>
@@ -429,7 +429,7 @@ $statusLabels = [
             </a>
         </div>
         <div class="col-12">
-            <a href="/transport/driver/attendance.php" class="text-decoration-none">
+            <a href="/driver/attendance.php" class="text-decoration-none">
                 <div class="driver-card d-flex align-items-center justify-content-between px-3 py-2">
                     <div class="d-flex align-items-center gap-2">
                         <div style="font-size:1.8rem">📅</div>
@@ -453,7 +453,7 @@ $statusLabels = [
     <div class="section-title">⚡ Thao tác nhanh</div>
     <div class="row g-2 mb-4">
         <div class="col-6">
-            <a href="/transport/driver/trip_create.php" class="text-decoration-none">
+            <a href="/driver/trip_create.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">🚛</div>
                     <div class="small fw-semibold mt-1">Tạo chuyến xe</div>
@@ -461,7 +461,7 @@ $statusLabels = [
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/fuel_add.php" class="text-decoration-none">
+            <a href="/driver/fuel_add.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">⛽</div>
                     <div class="small fw-semibold mt-1">Nhập xăng dầu</div>
@@ -469,7 +469,7 @@ $statusLabels = [
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/trips.php" class="text-decoration-none">
+            <a href="/driver/trips.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">📋</div>
                     <div class="small fw-semibold mt-1">Lịch sử chuyến</div>
@@ -477,7 +477,7 @@ $statusLabels = [
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/profile.php" class="text-decoration-none">
+            <a href="/driver/profile.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">👤</div>
                     <div class="small fw-semibold mt-1">Hồ sơ của tôi</div>

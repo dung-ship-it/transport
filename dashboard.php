@@ -9,11 +9,11 @@ $role = $user['role'] ?? '';
 
 // ── Redirect theo role ──────────────────────────────────────
 if ($role === 'customer') {
-    header('Location: /transport/customer/dashboard.php');
+    header('Location: /customer/dashboard.php');
     exit;
 }
 if ($role === 'driver') {
-    header('Location: /transport/driver/dashboard.php');
+    header('Location: /driver/dashboard.php');
     exit;
 }
 

@@ -180,7 +180,7 @@ try {
         'status'          => 'locked',
         'period_id'       => $periodId,
         'confirmed_count' => $confirmedCount,
-        'redirect'        => '/transport/modules/reports/index.php?tab=revenue&date_from=' . urlencode($dateFrom) . '&date_to=' . urlencode($dateTo),
+        'redirect'        => '/modules/reports/index.php?tab=revenue&date_from=' . urlencode($dateFrom) . '&date_to=' . urlencode($dateTo),
         'summary' => [
             'total_amount'   => $totalAmount,
             'total_km'       => $totalKm,

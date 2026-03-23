@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
-if (!hasRole('customer')) { header('Location: /transport/dashboard.php'); exit; }
+if (!hasRole('customer')) { header('Location: /dashboard.php'); exit; }
 
 $pdo  = getDBConnection();
 $user = currentUser();

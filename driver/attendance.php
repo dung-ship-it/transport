@@ -6,7 +6,7 @@ requireLogin();
 
 $user = currentUser();
 if (($user['role'] ?? '') !== 'driver') {
-    header('Location: /transport/select_module.php');
+    header('Location: /select_module.php');
     exit;
 }
 

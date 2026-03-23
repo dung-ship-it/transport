@@ -1,7 +1,7 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/transport/config/database.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/transport/config/auth.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/transport/config/functions.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/database.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/auth.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config/functions.php';
 requireLogin();
 requirePermission('hr', 'view');
 

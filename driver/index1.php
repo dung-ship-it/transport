@@ -7,7 +7,7 @@ requireLogin();
 $user = currentUser();
 // Chỉ driver mới vào được
 if (($user['role'] ?? '') !== 'driver') {
-    header('Location: /transport/select_module.php');
+    header('Location: /select_module.php');
     exit;
 }
 
@@ -289,7 +289,7 @@ body { background: #f0f4f8; font-family: 'Segoe UI', system-ui, sans-serif; padd
             <i class="fas fa-calendar-minus"></i>
             <span>Xin nghỉ phép<?= $pendingLeave>0?"<span class='notif-dot'></span>":'' ?></span>
         </a>
-        <a href="/transport/logout.php" class="quick-btn" style="background:#fef2f2;color:#dc2626;">
+        <a href="/logout.php" class="quick-btn" style="background:#fef2f2;color:#dc2626;">
             <i class="fas fa-sign-out-alt"></i>
             <span>Đăng xuất</span>
         </a>

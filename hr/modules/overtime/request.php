@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && verifyCSRF($_POST['csrf_token'] ?? 
                 try {
                     $pdo->prepare("
                         INSERT INTO notifications (user_id, title, message, type, link, created_at)
-                        VALUES (?, ?, ?, 'ot_request', '/transport/hr/modules/overtime/manage.php', NOW())
+                        VALUES (?, ?, ?, 'ot_request', '/hr/modules/overtime/manage.php', NOW())
                     ")->execute([
                         $ap['id'],
                         '📋 Đơn đăng ký OT mới',

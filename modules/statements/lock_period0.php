@@ -150,7 +150,7 @@ try {
     $pdo->commit();
 
     // URL redirect sang báo cáo
-    $redirect = '/transport/modules/reports/index.php?tab=revenue'
+    $redirect = '/modules/reports/index.php?tab=revenue'
               . '&date_from=' . urlencode($dateFrom)
               . '&date_to='   . urlencode($dateTo)
               . '&from_lock=1';

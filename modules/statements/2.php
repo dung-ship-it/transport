@@ -28,7 +28,7 @@ if (!$hasAccess) {
             <i class="fas fa-ban fa-3x text-danger mb-3 d-block"></i>
             <h4>Không có quyền truy cập</h4>
             <p class="text-muted">Bạn không có quyền xem trang này.</p>
-            <a href="/transport/dashboard.php" class="btn btn-primary">
+            <a href="/dashboard.php" class="btn btn-primary">
                 <i class="fas fa-home me-1"></i>Về Dashboard
             </a>
         </div>

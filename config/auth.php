@@ -10,7 +10,7 @@ function startSession(): void {
 function requireLogin(): void {
     startSession();
     if (empty($_SESSION['user_id'])) {
-        header('Location: /transport/login.php');
+        header('Location: /login.php');
         exit;
     }
 }
@@ -34,9 +34,9 @@ function can(string $module, string $action): bool {
 function getHomeUrl(): string {
     $role = currentUser()['role'] ?? '';
     return match($role) {
-        'driver'   => '/transport/driver/dashboard.php',
-        'customer' => '/transport/customer/dashboard.php',
-        default    => '/transport/select_module.php',
+        'driver'   => '/driver/dashboard.php',
+        'customer' => '/customer/dashboard.php',
+        default    => '/select_module.php',
     };
 }
 
@@ -85,7 +85,7 @@ function login(string $username, string $password): bool {
 function logout(): void {
     startSession();
     session_destroy();
-    header('Location: /transport/login.php');
+    header('Location: /login.php');
     exit;
 }
 
@@ -101,7 +101,7 @@ function requireRole(string ...$roles): void {
             <div style="font-size:4rem">🚫</div>
             <h4 class="mt-3">Không có quyền truy cập</h4>
             <p class="text-muted">Bạn không có quyền xem trang này.</p>
-            <a href="/transport/dashboard.php" class="btn btn-primary">Về Dashboard</a>
+            <a href="/dashboard.php" class="btn btn-primary">Về Dashboard</a>
         </div></body></html>';
         exit;
     }

@@ -203,7 +203,7 @@ include '../../../includes/sidebar.php';
                             <?= date('d/m/Y', strtotime($m['mdate'])) ?>
                         </td>
                         <td>
-                            <a href="/transport/modules/vehicles/detail.php?id=<?= $m['vehicle_id'] ?>&tab=maintenance"
+                            <a href="/modules/vehicles/detail.php?id=<?= $m['vehicle_id'] ?>&tab=maintenance"
                                class="fw-bold text-decoration-none">
                                 <?= $m['plate_number'] ?>
                             </a>

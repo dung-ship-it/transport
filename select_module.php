@@ -9,11 +9,11 @@ $role = $user['role'] ?? '';
 
 // ── Customer và Driver không dùng select_module, redirect thẳng về dashboard của họ
 if ($role === 'customer') {
-    header('Location: /transport/customer/dashboard.php');
+    header('Location: /customer/dashboard.php');
     exit;
 }
 if ($role === 'driver') {
-    header('Location: /transport/driver/dashboard.php');
+    header('Location: /driver/dashboard.php');
     exit;
 }
 
@@ -25,7 +25,7 @@ $modules = [
         'color'       => '#1a56db',
         'bg'          => 'linear-gradient(135deg, #1a56db 0%, #0e3a8c 100%)',
         'description' => 'Quản lý chuyến xe, lái xe,\nkhách hàng, nhiên liệu',
-        'url'         => '/transport/dashboard.php',
+        'url'         => '/dashboard.php',
         'roles'       => [], // [] = tất cả role đều thấy
         'stats_query' => "SELECT COUNT(*) FROM trips WHERE trip_date = CURDATE()",
         'stats_label' => 'chuyến hôm nay',
@@ -37,7 +37,7 @@ $modules = [
         'color'       => '#0e9f6e',
         'bg'          => 'linear-gradient(135deg, #0e9f6e 0%, #057a55 100%)',
         'description' => 'Chấm công, nghỉ phép, OT,\nbảng lương, KPI',
-        'url'         => '/transport/hr/dashboard.php',
+        'url'         => '/hr/dashboard.php',
         'roles'       => [], // [] = tất cả
         'stats_query' => "SELECT COUNT(*) FROM users WHERE is_active = 1",
         'stats_label' => 'nhân viên',
@@ -49,7 +49,7 @@ $modules = [
         'color'       => '#d03801',
         'bg'          => 'linear-gradient(135deg, #d03801 0%, #8b2000 100%)',
         'description' => 'Kho hàng, nhập xuất,\nđơn hàng, tồn kho',
-        'url'         => '/transport/logistics/dashboard.php',
+        'url'         => '/logistics/dashboard.php',
         'roles'       => [],
         'stats_query' => null,
         'stats_label' => 'Sắp ra mắt',
@@ -495,7 +495,7 @@ $badge = getRoleBadge($user['role']);
 
 <!-- Footer -->
 <div class="page-footer">
-    <a href="/transport/logout.php">
+    <a href="/logout.php">
         <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
     </a>
     <span style="color:#334155; margin: 0 12px">·</span>

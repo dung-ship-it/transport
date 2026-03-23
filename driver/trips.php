@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
-if (!hasRole('driver')) { header('Location: /transport/dashboard.php'); exit; }
+if (!hasRole('driver')) { header('Location: /dashboard.php'); exit; }
 
 $pageTitle = 'Chuyến xe của tôi';
 $pdo  = getDBConnection();
@@ -45,7 +45,7 @@ include 'includes/header.php';
 <div class="driver-topbar">
     <div class="d-flex justify-content-between align-items-center">
         <div class="fw-bold">📋 Chuyến xe của tôi</div>
-        <a href="/transport/driver/trip_create.php" class="btn btn-sm btn-success rounded-pill">
+        <a href="/driver/trip_create.php" class="btn btn-sm btn-success rounded-pill">
             + Tạo chuyến
         </a>
     </div>
@@ -102,7 +102,7 @@ include 'includes/header.php';
         $from = $trip['pickup_location'] ?? $trip['route_from'] ?? '';
         $to   = $trip['dropoff_location'] ?? $trip['route_to']  ?? '';
     ?>
-    <a href="/transport/driver/trip_detail.php?id=<?= $trip['id'] ?>"
+    <a href="/driver/trip_detail.php?id=<?= $trip['id'] ?>"
        class="text-decoration-none">
         <div class="trip-card status-<?= $trip['status'] ?>">
             <div class="d-flex justify-content-between mb-1">

@@ -699,7 +699,7 @@ $tabs = [
         </small>
     </div>
     <div class="d-flex gap-2">
-        <a href="/transport/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
+        <a href="/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
            class="btn btn-sm btn-outline-success">
             <i class="fas fa-lock me-1"></i>Tới Bảng kê & Chốt kỳ
         </a>
@@ -991,7 +991,7 @@ $tabs = [
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h5 class="fw-bold mb-0">💰 Doanh thu theo bảng kê đã chốt</h5>
-    <a href="/transport/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
+    <a href="/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
        class="btn btn-sm btn-success">
         <i class="fas fa-lock me-1"></i>Vào Bảng kê để chốt kỳ mới
     </a>
@@ -1099,7 +1099,7 @@ $tabs = [
             ⚠️ Chuyến chưa thuộc kỳ chốt nào
             <span class="badge bg-warning text-dark ms-1"><?= count($revenueTrips) ?></span>
         </h6>
-        <a href="/transport/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
+        <a href="/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
            class="btn btn-sm btn-warning fw-semibold">
             🔒 Chốt kỳ ngay →
         </a>
@@ -1157,7 +1157,7 @@ $tabs = [
 <div class="card border-0 shadow-sm p-5 text-center">
     <i class="fas fa-file-invoice-dollar fa-3x mb-3 text-muted opacity-25"></i>
     <h5 class="text-muted">Không có dữ liệu doanh thu trong kỳ này</h5>
-    <a href="/transport/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
+    <a href="/modules/statements/index.php?date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
        class="btn btn-success mt-2">
         <i class="fas fa-lock me-1"></i>Vào Bảng kê & Chốt kỳ
     </a>
