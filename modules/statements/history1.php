@@ -13,7 +13,7 @@ $roleStmt->execute([$user['id']]);
 $userRole = strtolower($roleStmt->fetchColumn() ?? '');
 $allowedRoles = ['admin', 'superadmin', 'accountant', 'ketoan', 'ke_toan', 'manager'];
 if (!in_array($userRole, $allowedRoles) && !can('statements', 'view')) {
-    header('Location: /transport/dashboard.php'); exit;
+    header('Location: /dashboard.php'); exit;
 }
 
 // Lấy danh sách kỳ — dùng COALESCE để handle null
@@ -56,7 +56,7 @@ include '../../includes/sidebar.php';
             <a href="index.php" class="btn btn-primary btn-sm">
                 <i class="fas fa-plus me-1"></i>Tạo bảng kê mới
             </a>
-            <a href="/transport/modules/reports/index.php?tab=revenue" class="btn btn-info btn-sm">
+            <a href="/modules/reports/index.php?tab=revenue" class="btn btn-info btn-sm">
                 <i class="fas fa-chart-bar me-1"></i>Báo cáo tổng hợp
             </a>
         </div>
@@ -160,12 +160,12 @@ include '../../includes/sidebar.php';
                                class="btn btn-outline-secondary" title="Mở bảng kê">
                                 <i class="fas fa-folder-open"></i>
                             </a>
-                            <a href="/transport/modules/reports/index.php?tab=revenue&date_from=<?= $p['period_from'] ?>&date_to=<?= $p['period_to'] ?>"
+                            <a href="/modules/reports/index.php?tab=revenue&date_from=<?= $p['period_from'] ?>&date_to=<?= $p['period_to'] ?>"
                                class="btn btn-outline-primary" title="Xem báo cáo">
                                 <i class="fas fa-chart-bar"></i>
                             </a>
                             <?php if ($p['status'] === 'locked'): ?>
-                            <a href="/transport/modules/reports/index.php?tab=pl&date_from=<?= $p['period_from'] ?>&date_to=<?= $p['period_to'] ?>"
+                            <a href="/modules/reports/index.php?tab=pl&date_from=<?= $p['period_from'] ?>&date_to=<?= $p['period_to'] ?>"
                                class="btn btn-outline-info" title="Lãi/lỗ kỳ này">
                                 <i class="fas fa-balance-scale"></i>
                             </a>

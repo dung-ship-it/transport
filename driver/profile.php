@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
-if (!hasRole('driver')) { header('Location: /transport/dashboard.php'); exit; }
+if (!hasRole('driver')) { header('Location: /dashboard.php'); exit; }
 
 $pageTitle = 'Hồ sơ của tôi';
 $pdo  = getDBConnection();
@@ -62,7 +62,7 @@ include 'includes/header.php';
     </div>
 
     <!-- Đăng xuất -->
-    <a href="/transport/logout.php"
+    <a href="/logout.php"
        class="btn btn-outline-danger btn-driver mb-3"
        onclick="return confirm('Đăng xuất?')">
         <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất

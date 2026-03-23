@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
-if (!hasRole('customer')) { header('Location: /transport/dashboard.php'); exit; }
+if (!hasRole('customer')) { header('Location: /dashboard.php'); exit; }
 
 $pdo  = getDBConnection();
 $user = currentUser();
@@ -94,7 +94,7 @@ include '../includes/customer_header.php';
         <a href="dashboard.php" class="btn btn-sm btn-outline-light">
             <i class="fas fa-home"></i>
         </a>
-        <a href="/transport/logout.php" class="btn btn-sm btn-outline-light">
+        <a href="/logout.php" class="btn btn-sm btn-outline-light">
             <i class="fas fa-sign-out-alt"></i>
         </a>
     </div>

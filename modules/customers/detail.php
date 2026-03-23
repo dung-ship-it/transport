@@ -1090,7 +1090,7 @@ include '../../includes/sidebar.php';
         <i class="fas fa-file-invoice-dollar fa-3x mb-3 text-muted opacity-25"></i>
         <h5 class="text-muted">Bảng kê / Công nợ</h5>
         <p class="text-muted">Xem tất cả bảng kê của khách hàng này</p>
-        <a href="/transport/modules/statements/index.php?customer_id=<?= $id ?>"
+        <a href="/modules/statements/index.php?customer_id=<?= $id ?>"
            class="btn btn-primary">
             <i class="fas fa-external-link-alt me-1"></i> Xem bảng kê
         </a>

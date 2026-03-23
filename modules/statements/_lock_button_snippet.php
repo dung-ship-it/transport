@@ -10,7 +10,7 @@
         <i class="fas fa-lock-open me-1"></i>Mở lại kỳ
     </button>
     <!-- Nút đi đến Báo cáo -->
-    <a href="/transport/modules/reports/index.php?tab=revenue&date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
+    <a href="/modules/reports/index.php?tab=revenue&date_from=<?= $dateFrom ?>&date_to=<?= $dateTo ?>"
        class="btn btn-sm btn-info">
         <i class="fas fa-chart-bar me-1"></i>Xem Báo cáo tổng hợp
     </a>
@@ -58,7 +58,7 @@ function doLock() {
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin me-1"></i>Đang chốt...';
 
-    fetch('/transport/modules/statements/lock_period.php', {
+    fetch('/modules/statements/lock_period.php', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body   : JSON.stringify({
@@ -77,7 +77,7 @@ function doLock() {
             // Flash message rồi redirect sang Báo cáo tổng hợp
             alert(data.msg);
             window.location.href = data.redirect ||
-                '/transport/modules/reports/index.php?tab=revenue&date_from=' +
+                '/modules/reports/index.php?tab=revenue&date_from=' +
                 LOCK_DATE_FROM + '&date_to=' + LOCK_DATE_TO;
         } else {
             alert('❌ ' + data.msg);
@@ -94,7 +94,7 @@ function doLock() {
 
 function doUnlock() {
     if (!confirm('Mở lại kỳ này để chỉnh sửa?')) return;
-    fetch('/transport/modules/statements/lock_period.php', {
+    fetch('/modules/statements/lock_period.php', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body   : JSON.stringify({ action: 'unlock', date_from: LOCK_DATE_FROM, date_to: LOCK_DATE_TO })

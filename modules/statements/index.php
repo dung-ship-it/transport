@@ -28,7 +28,7 @@ if (!$hasAccess) {
             <i class="fas fa-ban fa-3x text-danger mb-3 d-block"></i>
             <h4>Không có quyền truy cập</h4>
             <p class="text-muted">Bạn không có quyền xem trang này.</p>
-            <a href="/transport/dashboard.php" class="btn btn-primary">
+            <a href="/dashboard.php" class="btn btn-primary">
                 <i class="fas fa-home me-1"></i>Về Dashboard
             </a>
         </div>
@@ -819,7 +819,7 @@ async function doLock() {
             // Redirect sau 1.5s sang reports với kỳ này
             setTimeout(() => {
                 window.location.href =
-                    '/transport/modules/reports/index.php?tab=revenue' +
+                    '/modules/reports/index.php?tab=revenue' +
                     '&date_from=' + encodeURIComponent(df) +
                     '&date_to='   + encodeURIComponent(dt) +
                     '&from_lock=1';

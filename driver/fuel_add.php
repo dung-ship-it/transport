@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
-if (!hasRole('driver')) { header('Location: /transport/dashboard.php'); exit; }
+if (!hasRole('driver')) { header('Location: /dashboard.php'); exit; }
 
 $pageTitle = 'Nhập xăng dầu';
 $pdo  = getDBConnection();
@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($file['size'] > $maxSize) {
             $errors[] = 'File quá lớn (tối đa 5MB)';
         } else {
-            $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/transport/uploads/fuel_receipts/';
+            $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/fuel_receipts/';
             if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
             $fileName  = 'fuel_' . $driverId . '_' . time() . '.' . $ext;
             if (move_uploaded_file($file['tmp_name'], $uploadDir . $fileName)) {
-                $receiptImg = '/transport/uploads/fuel_receipts/' . $fileName;
+                $receiptImg = '/uploads/fuel_receipts/' . $fileName;
             } else {
                 $errors[] = 'Lỗi upload file, thử lại!';
             }

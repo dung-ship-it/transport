@@ -175,7 +175,7 @@ try {
         'status'          => 'locked',
         'period_id'       => $periodId,
         'confirmed_count' => $confirmedCount,
-        'redirect'        => '/transport/modules/reports/index.php?tab=revenue&date_from=' . $dateFrom . '&date_to=' . $dateTo,
+        'redirect'        => '/modules/reports/index.php?tab=revenue&date_from=' . $dateFrom . '&date_to=' . $dateTo,
     ]);
 
 } catch (Throwable $e) {

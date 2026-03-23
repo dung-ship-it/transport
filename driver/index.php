@@ -6,7 +6,7 @@ requireLogin();
 
 $user = currentUser();
 if (($user['role'] ?? '') !== 'driver') {
-    header('Location: /transport/select_module.php');
+    header('Location: /select_module.php');
     exit;
 }
 
@@ -199,7 +199,7 @@ body { background: #f0f4f8; font-family: 'Segoe UI', system-ui, sans-serif; padd
 <!-- Header -->
 <div class="driver-header">
     <div class="d-flex justify-content-between align-items-start mb-2">
-        <a href="/transport/driver/dashboard.php" class="back-btn">
+        <a href="/driver/dashboard.php" class="back-btn">
             <i class="fas fa-arrow-left"></i> Dashboard
         </a>
         <div class="date-badge">📅 <?= date('d/m/Y') ?></div>
@@ -321,7 +321,7 @@ body { background: #f0f4f8; font-family: 'Segoe UI', system-ui, sans-serif; padd
             <i class="fas fa-calendar-minus"></i>
             <span>Xin nghỉ phép<?= $pendingLeave>0 ? "<span class='notif-dot'></span>" : '' ?></span>
         </a>
-        <a href="/transport/driver/dashboard.php" class="quick-btn" style="background:#f1f5f9;color:#475569;">
+        <a href="/driver/dashboard.php" class="quick-btn" style="background:#f1f5f9;color:#475569;">
             <i class="fas fa-truck"></i>
             <span>Dashboard Xe</span>
         </a>
@@ -348,7 +348,7 @@ body { background: #f0f4f8; font-family: 'Segoe UI', system-ui, sans-serif; padd
 
 <!-- Bottom Nav -->
 <nav class="bottom-nav">
-    <a href="/transport/driver/dashboard.php">
+    <a href="/driver/dashboard.php">
         <i class="fas fa-truck"></i>
         <span class="nav-label">Chuyến xe</span>
     </a>

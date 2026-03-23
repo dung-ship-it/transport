@@ -4,7 +4,7 @@ require_once '../config/auth.php';
 require_once '../config/functions.php';
 requireLogin();
 if (!hasRole('driver')) {
-    header('Location: /transport/dashboard.php'); exit;
+    header('Location: /dashboard.php'); exit;
 }
 
 $pageTitle = 'Trang chủ';
@@ -91,7 +91,7 @@ include 'includes/header.php';
         </div>
         <div class="d-flex gap-2 align-items-center">
             <span class="badge bg-success">🚗 Lái Xe</span>
-            <a href="/transport/logout.php" class="text-white opacity-75">
+            <a href="/logout.php" class="text-white opacity-75">
                 <i class="fas fa-sign-out-alt"></i>
             </a>
         </div>
@@ -141,7 +141,7 @@ include 'includes/header.php';
     <div class="driver-card text-center py-3">
         <div style="font-size:2.5rem">😴</div>
         <div class="text-muted mt-1">Không có chuyến nào hôm nay</div>
-        <a href="/transport/driver/trip_create.php" class="btn btn-primary btn-sm mt-2 rounded-pill">
+        <a href="/driver/trip_create.php" class="btn btn-primary btn-sm mt-2 rounded-pill">
             + Tạo chuyến mới
         </a>
     </div>
@@ -168,7 +168,7 @@ include 'includes/header.php';
         $from = $trip['pickup_location'] ?? $trip['route_from'] ?? '';
         $to   = $trip['dropoff_location'] ?? $trip['route_to']  ?? '';
     ?>
-    <a href="/transport/driver/trip_detail.php?id=<?= $trip['id'] ?>"
+    <a href="/driver/trip_detail.php?id=<?= $trip['id'] ?>"
        class="text-decoration-none">
         <div class="trip-card status-<?= $trip['status'] ?>">
             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -219,7 +219,7 @@ include 'includes/header.php';
         $from = $trip['pickup_location'] ?? $trip['route_from'] ?? '';
         $to   = $trip['dropoff_location'] ?? $trip['route_to']  ?? '';
     ?>
-    <a href="/transport/driver/trip_detail.php?id=<?= $trip['id'] ?>"
+    <a href="/driver/trip_detail.php?id=<?= $trip['id'] ?>"
        class="text-decoration-none">
         <div class="trip-card" style="border-left-color:#6c757d">
             <div class="d-flex justify-content-between align-items-center mb-1">
@@ -249,7 +249,7 @@ include 'includes/header.php';
     <div class="section-title">⚡ Thao tác nhanh</div>
     <div class="row g-2 mb-3">
         <div class="col-6">
-            <a href="/transport/driver/trip_create.php" class="text-decoration-none">
+            <a href="/driver/trip_create.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">🚛</div>
                     <div class="small fw-semibold mt-1">Tạo chuyến xe</div>
@@ -257,7 +257,7 @@ include 'includes/header.php';
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/fuel_add.php" class="text-decoration-none">
+            <a href="/driver/fuel_add.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">⛽</div>
                     <div class="small fw-semibold mt-1">Nhập xăng dầu</div>
@@ -265,7 +265,7 @@ include 'includes/header.php';
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/trips.php" class="text-decoration-none">
+            <a href="/driver/trips.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">📋</div>
                     <div class="small fw-semibold mt-1">Lịch sử chuyến</div>
@@ -273,7 +273,7 @@ include 'includes/header.php';
             </a>
         </div>
         <div class="col-6">
-            <a href="/transport/driver/profile.php" class="text-decoration-none">
+            <a href="/driver/profile.php" class="text-decoration-none">
                 <div class="driver-card text-center py-3">
                     <div style="font-size:2rem">👤</div>
                     <div class="small fw-semibold mt-1">Hồ sơ của tôi</div>

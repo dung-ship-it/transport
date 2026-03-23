@@ -39,7 +39,7 @@
 
         <!-- ── DASHBOARD ── -->
         <li class="nav-item">
-            <a href="/transport/dashboard.php" class="nav-link text-white-50 hover-nav">
+            <a href="/dashboard.php" class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-tachometer-alt me-2"></i>Dashboard
             </a>
         </li>
@@ -51,7 +51,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="/transport/modules/trips/customer_confirm.php"
+            <a href="/modules/trips/customer_confirm.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-check-circle me-2"></i>Xác nhận lịch trình
             </a>
@@ -65,7 +65,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="/transport/modules/statements/my_statements.php"
+            <a href="/modules/statements/my_statements.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-file-invoice me-2"></i>Bảng kê của tôi
             </a>
@@ -79,7 +79,7 @@
                    style="font-size:0.62rem;letter-spacing:0.5px">Báo Cáo</small>
         </li>
         <li class="nav-item">
-            <a href="/transport/modules/reports/customer_report.php"
+            <a href="/modules/reports/customer_report.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-chart-pie me-2"></i>Báo cáo vận chuyển
             </a>
@@ -90,7 +90,7 @@
 
     <!-- Đăng xuất -->
     <div class="mt-auto p-3 border-top border-secondary">
-        <a href="/transport/logout.php" class="nav-link text-danger hover-nav">
+        <a href="/logout.php" class="nav-link text-danger hover-nav">
             <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
         </a>
     </div>

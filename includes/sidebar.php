@@ -25,7 +25,7 @@
 
         <!-- ── DASHBOARD ── -->
         <li class="nav-item">
-            <a href="/transport/dashboard.php" class="nav-link text-white-50 hover-nav">
+            <a href="/dashboard.php" class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-tachometer-alt me-2"></i>Dashboard
             </a>
         </li>
@@ -39,7 +39,7 @@
 
         <?php if (can('users', 'view')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/admin/users/index.php"
+            <a href="/modules/admin/users/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-users-cog me-2"></i>Quản lý Users
             </a>
@@ -48,7 +48,7 @@
 
         <?php if (can('users', 'assign_role')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/admin/roles/index.php"
+            <a href="/modules/admin/roles/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-shield-alt me-2"></i>Phân quyền
             </a>
@@ -69,7 +69,7 @@
 
         <?php if (can('vehicles', 'view') || can('vehicles', 'crud')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/vehicles/index.php"
+            <a href="/modules/vehicles/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-truck me-2"></i>Quản lý xe
             </a>
@@ -78,7 +78,7 @@
 
         <?php if (can('expenses', 'create') || can('expenses', 'approve')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/vehicles/maintenance/index.php"
+            <a href="/modules/vehicles/maintenance/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-tools me-2"></i>Sửa chữa / Bảo dưỡng
             </a>
@@ -87,7 +87,7 @@
 
         <?php if (can('fuel', 'create')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/vehicles/fuel/add.php"
+            <a href="/modules/vehicles/fuel/add.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-gas-pump me-2"></i>Nhập nhiên liệu
             </a>
@@ -96,7 +96,7 @@
 
         <?php if (can('fuel', 'view_all')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/vehicles/fuel/index.php"
+            <a href="/modules/vehicles/fuel/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-gas-pump me-2"></i>Quản lý xăng dầu
             </a>
@@ -117,7 +117,7 @@
 
          <?php if (can('trips', 'confirm')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/trips/confirm.php"
+            <a href="/modules/trips/confirm.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-check-circle me-2"></i>Xác nhận lịch trình
             </a>
@@ -126,7 +126,7 @@
 
         <?php if (can('trips', 'view_own')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/trips/my_trips.php"
+            <a href="/modules/trips/my_trips.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-route me-2"></i>Lịch trình của tôi
             </a>
@@ -135,7 +135,7 @@
 
         <?php if (can('trips', 'view_all')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/trips/index.php"
+            <a href="/modules/trips/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-list me-2"></i>Tất cả chuyến xe
             </a>
@@ -146,7 +146,7 @@
 
         <?php if (can('statements', 'view_own')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/statements/my_statements.php"
+            <a href="/modules/statements/my_statements.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-file-invoice me-2"></i>Bảng kê của tôi
             </a>
@@ -167,7 +167,7 @@
 
         <?php if (can('customers', 'crud') || can('customers', 'view')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/customers/index.php"
+            <a href="/modules/customers/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-building me-2"></i>Khách hàng
             </a>
@@ -177,7 +177,7 @@
         
         <?php if (can('statements', 'crud')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/statements/index.php"
+            <a href="/modules/statements/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-file-invoice-dollar me-2"></i>Bảng kê công nợ
             </a>
@@ -197,7 +197,7 @@
 
         <?php if (can('payroll','view') || can('payroll','approve') || can('payroll','submit')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/payroll/index.php"
+            <a href="/modules/payroll/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-money-check-alt me-2"></i>Bảng lương
             </a>
@@ -206,7 +206,7 @@
 
         <?php if (can('kpi','view') || can('kpi','manage') || can('kpi','calculate')): ?>
         <li class="nav-item">
-            <a href="/transport/modules/kpi/index.php"
+            <a href="/modules/kpi/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-chart-bar me-2"></i>KPI Lái Xe
             </a>
@@ -225,7 +225,7 @@
                    style="font-size:0.62rem;letter-spacing:0.5px">Báo Cáo</small>
         </li>
         <li class="nav-item">
-            <a href="/transport/modules/reports/index.php"
+            <a href="/modules/reports/index.php"
                class="nav-link text-white-50 hover-nav">
                 <i class="fas fa-chart-pie me-2"></i>Báo cáo tổng hợp
             </a>
@@ -235,14 +235,14 @@
     </ul>
 <!-- Đổi module -->
     <div class="px-3 pb-2">
-        <a href="/transport/select_module.php"
+        <a href="/select_module.php"
            class="btn btn-outline-secondary btn-sm w-100">
             <i class="fas fa-th-large me-2"></i>Đổi nghiệp vụ
         </a>
     </div>
     <!-- Đăng xuất -->
     <div class="mt-auto p-3 border-top border-secondary">
-        <a href="/transport/logout.php" class="nav-link text-danger hover-nav">
+        <a href="/logout.php" class="nav-link text-danger hover-nav">
             <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
         </a>
     </div>

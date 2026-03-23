@@ -4,7 +4,7 @@ startSession();
 
 // Nếu đã đăng nhập thì chuyển về select_module
 if (!empty($_SESSION['user_id'])) {
-    header('Location: /transport/select_module.php');
+    header('Location: /select_module.php');
     exit;
 }
 
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($username && $password) {
         if (login($username, $password)) {
             // ✅ Luôn về select_module sau khi đăng nhập thành công
-            header('Location: /transport/select_module.php');
+            header('Location: /select_module.php');
             exit;
         } else {
             $error = 'Tên đăng nhập hoặc mật khẩu không đúng!';

@@ -64,7 +64,7 @@ include '../../../includes/sidebar.php';
             <p class="text-muted mb-0">Tổng: <strong><?= count($users) ?></strong> tài khoản</p>
         </div>
         <?php if (can('users', 'create')): ?>
-        <a href="/transport/modules/admin/users/create.php" class="btn btn-primary">
+        <a href="/modules/admin/users/create.php" class="btn btn-primary">
             <i class="fas fa-plus me-1"></i> Tạo tài khoản
         </a>
         <?php endif; ?>

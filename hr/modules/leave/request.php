@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && verifyCSRF($_POST['csrf_token'] ?? 
                 try {
                     $pdo->prepare("
                         INSERT INTO notifications (user_id, title, message, type, link, created_at)
-                        VALUES (?, ?, ?, 'leave_request', '/transport/hr/modules/leave/manage.php', NOW())
+                        VALUES (?, ?, ?, 'leave_request', '/hr/modules/leave/manage.php', NOW())
                     ")->execute([
                         $ap['id'],
                         '📋 Đơn xin nghỉ phép mới',

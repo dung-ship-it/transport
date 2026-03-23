@@ -27,7 +27,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
 <nav class="sidebar" id="hrSidebar">
 
     <!-- Brand -->
-    <a href="/transport/hr/dashboard.php" class="sidebar-brand">
+    <a href="/hr/dashboard.php" class="sidebar-brand">
         <div class="brand-icon">👥</div>
         <div>
             <div class="brand-text">HR System</div>
@@ -37,7 +37,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
 
     <!-- Chuyển module -->
     <div style="padding:10px 12px 4px">
-        <a href="/transport/select_module.php"
+        <a href="/select_module.php"
            class="d-flex align-items-center gap-2 px-2 py-2 rounded text-decoration-none"
            style="background:rgba(255,255,255,.05);color:#94a3b8;font-size:.78rem">
             <i class="fas fa-th-large"></i>
@@ -48,7 +48,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <!-- Nav: Tổng quan -->
     <div class="sidebar-section">Tổng quan</div>
 
-    <a href="/transport/hr/dashboard.php"
+    <a href="/hr/dashboard.php"
        class="sidebar-link <?= hrNavActive('hr/dashboard', $currentPath) ?>">
         <i class="fas fa-tachometer-alt nav-icon"></i>
         <span>Dashboard HR</span>
@@ -57,24 +57,24 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <!-- Nav: Nhân viên -->
     <div class="sidebar-section">Nhân viên</div>
 
-    <a href="/transport/hr/modules/employees/index.php"
+    <a href="/hr/modules/employees/index.php"
        class="sidebar-link <?= hrNavActive('employees', $currentPath) ?>">
         <i class="fas fa-users nav-icon"></i>
         <span>Danh sách nhân viên</span>
     </a>
-<a href="/transport/hr/modules/attendance/shift_setup.php"
+<a href="/hr/modules/attendance/shift_setup.php"
    class="sidebar-link <?= hrNavActive('shift_setup', $currentPath) ?>">
     <i class="fas fa-cog nav-icon"></i>
     <span>Setup ca làm việc</span>
 </a>
 
-<a href="/transport/hr/modules/attendance/shift_assign.php"
+<a href="/hr/modules/attendance/shift_assign.php"
    class="sidebar-link <?= hrNavActive('shift_assign', $currentPath) ?>">
     <i class="fas fa-user-clock nav-icon"></i>
     <span>Phân công ca</span>
 </a>
 
-<a href="/transport/hr/modules/attendance/shift_schedule.php"
+<a href="/hr/modules/attendance/shift_schedule.php"
    class="sidebar-link <?= hrNavActive('shift_schedule', $currentPath) ?>">
     <i class="fas fa-calendar-alt nav-icon"></i>
     <span>Lịch ca tháng</span>
@@ -83,14 +83,14 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <!-- Nav: Chấm công -->
     <div class="sidebar-section">Chấm công</div>
 
-    <a href="/transport/hr/modules/attendance/index.php"
+    <a href="/hr/modules/attendance/index.php"
        class="sidebar-link <?= hrNavActive('attendance', $currentPath) ?>">
         <i class="fas fa-clock nav-icon"></i>
         <span>Chấm công</span>
     </a>
 
     <!-- OT: đăng ký -->
-    <a href="/transport/hr/modules/overtime/index.php"
+    <a href="/hr/modules/overtime/index.php"
        class="sidebar-link <?= hrNavActive('overtime/index', $currentPath) ?>">
         <i class="fas fa-business-time nav-icon"></i>
         <span>Tăng ca (OT)</span>
@@ -101,7 +101,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
 
     <!-- OT: duyệt (chỉ manager+) -->
     <?php if ($isHrManager): ?>
-    <a href="/transport/hr/modules/overtime/manage.php"
+    <a href="/hr/modules/overtime/manage.php"
        class="sidebar-link <?= hrNavActive('overtime/manage', $currentPath) ?>"
        style="padding-left:32px; font-size:.8rem;">
         <i class="fas fa-clipboard-check nav-icon" style="font-size:.78rem;color:#22d3ee;"></i>
@@ -113,7 +113,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <?php endif; ?>
 
     <!-- Nghỉ phép: đăng ký -->
-    <a href="/transport/hr/modules/leave/index.php"
+    <a href="/hr/modules/leave/index.php"
        class="sidebar-link <?= hrNavActive('leave/index', $currentPath) ?>">
         <i class="fas fa-calendar-minus nav-icon"></i>
         <span>Nghỉ phép</span>
@@ -124,7 +124,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
 
     <!-- Nghỉ phép: duyệt (chỉ manager+) -->
     <?php if ($isHrManager): ?>
-    <a href="/transport/hr/modules/leave/manage.php"
+    <a href="/hr/modules/leave/manage.php"
        class="sidebar-link <?= hrNavActive('leave/manage', $currentPath) ?>"
        style="padding-left:32px; font-size:.8rem;">
         <i class="fas fa-calendar-check nav-icon" style="font-size:.78rem;color:#a78bfa;"></i>
@@ -138,7 +138,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <!-- Nav: Lương -->
     <div class="sidebar-section">Tiền lương</div>
 
-    <a href="/transport/hr/modules/payroll/index.php"
+    <a href="/hr/modules/payroll/index.php"
        class="sidebar-link <?= hrNavActive('payroll', $currentPath) ?>">
         <i class="fas fa-money-bill-wave nav-icon"></i>
         <span>Bảng lương</span>
@@ -147,7 +147,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <!-- Nav: Báo cáo -->
     <div class="sidebar-section">Báo cáo</div>
 
-    <a href="/transport/hr/modules/reports/index.php"
+    <a href="/hr/modules/reports/index.php"
        class="sidebar-link <?= hrNavActive('reports', $currentPath) ?>">
         <i class="fas fa-chart-bar nav-icon"></i>
         <span>Báo cáo HR</span>
@@ -158,7 +158,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
         <div style="font-size:.72rem;color:#475569;margin-bottom:8px">
             <?= htmlspecialchars($user['full_name'] ?? '') ?>
         </div>
-        <a href="/transport/logout.php"
+        <a href="/logout.php"
            style="color:#64748b;font-size:.75rem;text-decoration:none">
             <i class="fas fa-sign-out-alt me-1"></i>Đăng xuất
         </a>
@@ -177,7 +177,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
     <span class="topbar-module-badge">👥 HR</span>
 
     <nav class="topbar-breadcrumb">
-        <a href="/transport/hr/dashboard.php">HR</a>
+        <a href="/hr/dashboard.php">HR</a>
         <?php if (isset($pageTitle) && $pageTitle !== 'HR Dashboard'): ?>
         <span class="mx-1 text-muted">/</span>
         <span><?= htmlspecialchars($pageTitle) ?></span>
@@ -186,7 +186,7 @@ $isHrManager = function_exists('can') && can('hr', 'manage');
 
     <div class="ms-auto d-flex align-items-center gap-3">
         <?php if ($totalPending > 0 && $isHrManager): ?>
-        <a href="/transport/hr/modules/overtime/manage.php"
+        <a href="/hr/modules/overtime/manage.php"
            class="badge bg-danger rounded-pill text-decoration-none"
            title="<?= $totalPending ?> yêu cầu chờ duyệt">
             <i class="fas fa-bell me-1"></i><?= $totalPending ?>
