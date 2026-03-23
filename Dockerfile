@@ -11,4 +11,4 @@ COPY . .
 
 RUN mkdir -p uploads/fuel_receipts && chmod -R 777 uploads
 
-CMD php -S 0.0.0.0:${PORT:-8080} -t .
+CMD ["/bin/sh", "-c", "php -S 0.0.0.0:${PORT:-8080} -t ."]
