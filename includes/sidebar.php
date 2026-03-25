@@ -105,6 +105,15 @@
         <?php endif; ?>
 
         <!-- ── CHUYẾN XE ── -->
+        <?php if (can('trips', 'view_all')): ?>
+        <li class="nav-item">
+            <a href="/modules/trips/create.php"
+               class="nav-link text-white-50 hover-nav">
+                <i class="fas fa-list me-2"></i>Tạo chuyến xe
+            </a>
+        </li>
+        <?php endif; ?>
+
         <?php if (
             can('trips','create') || can('trips','view_own') ||
             can('trips','view_all') || can('trips','confirm') ||
