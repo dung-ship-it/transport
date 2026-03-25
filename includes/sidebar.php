@@ -105,11 +105,11 @@
         <?php endif; ?>
 
         <!-- ── CHUYẾN XE ── -->
-        <?php if (can('trips', 'view_all')): ?>
+    <?php if (can('trips', 'view_own')): ?>
         <li class="nav-item">
             <a href="/modules/trips/create.php"
                class="nav-link text-white-50 hover-nav">
-                <i class="fas fa-list me-2"></i>Tạo chuyến xe
+                <i class="fas fa-route me-2"></i>Tạo Lịch Trình
             </a>
         </li>
         <?php endif; ?>
