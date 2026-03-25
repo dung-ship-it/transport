@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <!-- Hệ Thống Quản Trị và Điều Hành Xe -->
                     <div class="mt-3 p-2 bg-light rounded-3">
-                        <small class="text-muted d-block mb-1 fw-semibold">🔑 Tài khoản demo:</small>
+                        <small class="text-muted d-block mb-1 fw-semibold">Hotline Liên Hệ:</small>
                         <small class="text-muted">
                             
                             <code>Ms Lan</code> / <code>0975787806</code> — Kế Toán<br>
