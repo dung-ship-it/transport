@@ -76,8 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <!-- Logo & tiêu đề -->
                     <div class="text-center mb-4">
                         <div class="login-logo">🚛</div>
-                        <h4 class="fw-bold mb-1">Điều Hành Xe</h4>
-                        <p class="text-muted small">Đăng nhập để tiếp tục</p>
+                        <h4 class="fw-bold mb-1">DNA EXPRESS - SYSTEMS</h4>
+                        <p class="text-muted small">Tạo Bởi Dũng DNA</p>
                     </div>
 
                     <!-- Thông báo lỗi -->
@@ -127,17 +127,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="text-center">
                         <small class="text-muted">
                             <i class="fas fa-info-circle me-1"></i>
-                            Liên hệ Admin nếu quên mật khẩu
+                            Liên hệ Ms Lan nếu quên mật khẩu
                         </small>
                     </div>
 
-                    <!-- Tài khoản demo -->
+                    <!-- Hệ Thống Quản Trị và Điều Hành Xe -->
                     <div class="mt-3 p-2 bg-light rounded-3">
                         <small class="text-muted d-block mb-1 fw-semibold">🔑 Tài khoản demo:</small>
                         <small class="text-muted">
-                            <code>admin</code> / <code>Admin@123</code> — Tổng GĐ<br>
-                            <code>ketoan1</code> / <code>Admin@123</code> — Kế Toán<br>
-                            <code>laixe01</code> / <code>Admin@123</code> — Lái Xe
+                            
+                            <code>Ms Lan</code> / <code>0975787806</code> — Kế Toán<br>
+                            <code>Mr Sang</code> / <code>036 6666711</code> — Điều Hành
                         </small>
                     </div>
 
