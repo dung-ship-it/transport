@@ -73,9 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$selectedDid)      $errors[] = 'Vui lòng chọn lái xe';
     if ($liters <= 0)       $errors[] = 'Số lít phải lớn hơn 0';
     if ($amount <= 0)       $errors[] = 'Số tiền phải lớn hơn 0';
-    if (!$kmAfter)          $errors[] = 'Vui lòng nhập Km hiện tại';
-    if ($kmBefore === null) $errors[] = 'Vui lòng nhập Km lần trước';
-    if ($kmAfter && $kmBefore && $kmAfter <= $kmBefore)
+    if ($kmAfter !== null && $kmBefore !== null && $kmAfter <= $kmBefore)
         $errors[] = 'Km hiện tại phải lớn hơn Km lần trước';
 
     // Upload ảnh
@@ -220,26 +218,26 @@ include '../../../includes/sidebar.php';
                 <div class="row g-3">
                     <div class="col-md-4">
                         <label class="form-label fw-semibold">
-                            Km lần trước <span class="text-danger">*</span>
+                            Km lần trước
                         </label>
                         <input type="number" name="km_before" id="kmBefore"
                                class="form-control" step="0.1" min="0"
                                placeholder="Tự động lấy..."
                                value="<?= $_POST['km_before'] ?? '' ?>"
-                               oninput="calcStats()" required>
+                               oninput="calcStats()">
                         <small class="text-muted" id="kmBeforeNote">
                             Tự động lấy từ lần đổ trước
                         </small>
                     </div>
                     <div class="col-md-4">
                         <label class="form-label fw-semibold">
-                            Km hiện tại <span class="text-danger">*</span>
+                            Km hiện tại
                         </label>
                         <input type="number" name="km_after" id="kmAfter"
                                class="form-control" step="0.1" min="0"
                                placeholder="Nhập Km đồng hồ"
                                value="<?= $_POST['km_after'] ?? '' ?>"
-                               oninput="calcStats()" required>
+                               oninput="calcStats()">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label fw-semibold">Km đã đi</label>
