@@ -267,7 +267,7 @@ body { font-family: 'Times New Roman', serif; font-size:11pt; color:#222; }
 /* Summary */
 .summary-grid {
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:10px;
     margin-bottom:16px;
     font-family:sans-serif;
@@ -485,10 +485,6 @@ tr.in-progress  { background:#fff8e1; }
             <div class="lbl">Tổng KM</div>
         </div>
         <div class="summary-card">
-            <div class="num" style="color:#fd7e14"><?= number_format($totalToll, 0, '.', ',') ?></div>
-            <div class="lbl">Cầu đường (₫)</div>
-        </div>
-        <div class="summary-card">
             <div class="num" style="color:#6f42c1"><?= count($grouped) ?></div>
             <div class="lbl"><?= count($grouped) > 1 ? 'Khách hàng' : 'Khách hàng' ?></div>
         </div>
@@ -513,7 +509,6 @@ tr.in-progress  { background:#fff8e1; }
                 <th>Tải trọng</th>
                 <th>Số chuyến</th>
                 <th>Tổng KM</th>
-                <th>Cầu đường</th>
                 <th>Đã duyệt</th>
             </tr>
         </thead>
@@ -544,31 +539,26 @@ tr.in-progress  { background:#fff8e1; }
             </td>
             <td class="text-center"><?= $veh['trip_count'] ?></td>
             <td class="text-right"><?= number_format($veh['total_km'], 0) ?> km</td>
-            <td class="text-right">
-                <?= $veh['total_toll'] ? number_format($veh['total_toll'], 0, '.', ',') . ' đ' : '—' ?>
-            </td>
             <td class="text-center"><?= $veh['confirmed'] ?>/<?= $veh['trip_count'] ?></td>
         </tr>
         <?php endforeach; ?>
         <!-- Subtotal KH -->
         <tr style="background:#e8f4fd;font-weight:bold">
-            <td colspan="4" class="text-right" style="font-style:italic">
+            <td colspan="5" class="text-right" style="font-style:italic">
                 Tổng <?= htmlspecialchars($cGroup['customer_short'] ?: $cGroup['customer_name']) ?>
                 (<?= count($cGroup['vehicles']) ?> xe):
             </td>
             <td class="text-center"><?= $cGroup['trip_count'] ?></td>
             <td class="text-right"><?= number_format($cGroup['total_km'], 0) ?> km</td>
-            <td class="text-right"><?= number_format($cGroup['total_toll'], 0, '.', ',') ?> đ</td>
             <td class="text-center"><?= $cGroup['confirmed'] ?>/<?= $cGroup['trip_count'] ?></td>
         </tr>
         <?php endforeach; ?>
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="4" class="text-right">TỔNG CỘNG:</td>
+                <td colspan="5" class="text-right">TỔNG CỘNG:</td>
                 <td class="text-center"><?= $totalTrips ?></td>
                 <td class="text-right"><?= number_format($totalKm, 0) ?> km</td>
-                <td class="text-right"><?= number_format($totalToll, 0, '.', ',') ?> đ</td>
                 <td></td>
             </tr>
         </tfoot>
@@ -595,7 +585,6 @@ tr.in-progress  { background:#fff8e1; }
                 <?= count($cGroup['vehicles']) ?> xe
                 · <?= $cGroup['trip_count'] ?> chuyến
                 · <?= number_format($cGroup['total_km'], 0) ?> km
-                · <?= number_format($cGroup['total_toll'], 0, '.', ',') ?> đ cầu đường
             </div>
         </div>
 
@@ -612,7 +601,6 @@ tr.in-progress  { background:#fff8e1; }
                 <span style="font-weight:normal;font-size:9pt">
                     <?= $veh['trip_count'] ?> chuyến
                     · <?= number_format($veh['total_km'], 0) ?> km
-                    · <?= $veh['total_toll'] ? number_format($veh['total_toll'], 0, '.', ',') . ' đ' : 'không có cầu đường' ?>
                     · Đã duyệt: <?= $veh['confirmed'] ?>/<?= $veh['trip_count'] ?>
                 </span>
             </div>
@@ -632,7 +620,6 @@ tr.in-progress  { background:#fff8e1; }
                         <th>KM đi</th>
                         <th>KM về</th>
                         <th>Tổng KM</th>
-                        <th>Cầu đường</th>
                         <th>Ghi chú</th>
                         <th>Trạng thái</th>
                         <th>KH duyệt</th>
@@ -669,9 +656,6 @@ tr.in-progress  { background:#fff8e1; }
                     <td class="text-right" style="font-weight:bold">
                         <?= $t['total_km'] ? number_format($t['total_km'], 0) . ' km' : '—' ?>
                     </td>
-                    <td class="text-right">
-                        <?= $t['toll_fee'] ? number_format($t['toll_fee'], 0, '.', ',') . ' đ' : '—' ?>
-                    </td>
                     <td style="font-size:8pt">
                         <?= htmlspecialchars($t['note'] ?? '') ?>
                         <?php if ($t['rejection_reason']): ?>
@@ -706,9 +690,6 @@ tr.in-progress  { background:#fff8e1; }
                         <td class="text-right">
                             <?= number_format($veh['total_km'], 0) ?> km
                         </td>
-                        <td class="text-right">
-                            <?= number_format($veh['total_toll'], 0, '.', ',') ?> đ
-                        </td>
                         <td colspan="3"></td>
                     </tr>
                 </tfoot>
@@ -722,7 +703,6 @@ tr.in-progress  { background:#fff8e1; }
             Tổng <?= htmlspecialchars($cGroup['customer_short'] ?: $cGroup['customer_name']) ?>:
             <?= $cGroup['trip_count'] ?> chuyến
             · <span style="color:#0d6efd"><?= number_format($cGroup['total_km'], 0) ?> km</span>
-            · <?= number_format($cGroup['total_toll'], 0, '.', ',') ?> đ cầu đường
         </div>
 
     </div><!-- end customer-block -->
@@ -734,7 +714,6 @@ tr.in-progress  { background:#fff8e1; }
         TỔNG CỘNG TẤT CẢ:
         <?= $totalTrips ?> chuyến
         · <?= number_format($totalKm, 0) ?> km
-        · <?= number_format($totalToll, 0, '.', ',') ?> đ cầu đường
     </div>
 
     <?php endif; ?>
