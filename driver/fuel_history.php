@@ -142,11 +142,21 @@ include 'includes/header.php';
         </div>
 
         <?php if ($log['receipt_img']): ?>
-        <div class="mt-2 text-center">
+        <div class="mt-2">
+            <?php
+            $ext = strtolower(pathinfo($log['receipt_img'], PATHINFO_EXTENSION));
+            if (in_array($ext, ['jpg','jpeg','png','gif','webp'])): ?>
+            <a href="<?= htmlspecialchars($log['receipt_img']) ?>" target="_blank">
+                <img src="<?= htmlspecialchars($log['receipt_img']) ?>"
+                     alt="Hóa đơn"
+                     style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid #dee2e6;">
+            </a>
+            <?php else: ?>
             <a href="<?= htmlspecialchars($log['receipt_img']) ?>"
                target="_blank" class="btn btn-sm btn-outline-secondary rounded-pill">
-                <i class="fas fa-receipt me-1"></i> Xem hóa đơn
+                <i class="fas fa-file-pdf me-1"></i> Xem hóa đơn PDF
             </a>
+            <?php endif; ?>
         </div>
         <?php endif; ?>
 
