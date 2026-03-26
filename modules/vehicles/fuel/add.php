@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } elseif ($file['size'] > 5 * 1024 * 1024) {
             $errors[] = 'File quá lớn (tối đa 5MB)';
         } else {
-            $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/fuel_receipts/';
+            $uploadDir = dirname(__DIR__, 3) . '/uploads/fuel_receipts/';
             if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
             $fileName = 'fuel_' . $selectedDid . '_' . time() . '.' . $ext;
             if (move_uploaded_file($file['tmp_name'], $uploadDir . $fileName)) {
