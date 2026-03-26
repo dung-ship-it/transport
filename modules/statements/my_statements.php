@@ -544,7 +544,7 @@ tr.in-progress  { background:#fff8e1; }
         <?php endforeach; ?>
         <!-- Subtotal KH -->
         <tr style="background:#e8f4fd;font-weight:bold">
-            <td colspan="5" class="text-right" style="font-style:italic">
+            <td colspan="4" class="text-right" style="font-style:italic">
                 Tổng <?= htmlspecialchars($cGroup['customer_short'] ?: $cGroup['customer_name']) ?>
                 (<?= count($cGroup['vehicles']) ?> xe):
             </td>
@@ -556,7 +556,7 @@ tr.in-progress  { background:#fff8e1; }
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="5" class="text-right">TỔNG CỘNG:</td>
+                <td colspan="4" class="text-right">TỔNG CỘNG:</td>
                 <td class="text-center"><?= $totalTrips ?></td>
                 <td class="text-right"><?= number_format($totalKm, 0) ?> km</td>
                 <td></td>
@@ -682,7 +682,7 @@ tr.in-progress  { background:#fff8e1; }
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="<?= ($role !== 'customer') ? 7 : 6 ?>"
+                        <td colspan="<?= ($role !== 'customer') ? 8 : 7 ?>"
                             class="text-right">
                             Tổng xe <?= htmlspecialchars($plate) ?>
                             (<?= $veh['trip_count'] ?> chuyến):
