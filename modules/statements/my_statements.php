@@ -374,6 +374,11 @@ tr.in-progress  { background:#fff8e1; }
 <div class="screen-toolbar">
     <button onclick="window.print()">🖨️ In bảng kê</button>
 
+    <a href="javascript:void(0)" onclick="exportExcel()"
+       style="padding:7px 16px;border-radius:5px;border:1px solid #198754;background:#198754;color:#fff;text-decoration:none;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-family:sans-serif">
+        📥 Xuất Excel
+    </a>
+
     <span class="tb-sep">|</span>
 
     <div style="display:flex;align-items:center;gap:6px;font-family:sans-serif">
@@ -785,6 +790,12 @@ function applyCustom() {
 
 function applyFilters() {
     location.href = buildParams();
+}
+
+function exportExcel() {
+    const params = buildParams();
+    const qs = params.indexOf('?') !== -1 ? params.substring(params.indexOf('?')) : '';
+    window.location.href = 'export_excel.php' + qs;
 }
 </script>
 
