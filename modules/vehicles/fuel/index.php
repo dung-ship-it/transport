@@ -66,8 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['approve_id'])) {
 // Xử lý xoá
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id']) && $canManage) {
     $deleteId = (int)$_POST['delete_id'];
-    // Chỉ xoá nếu chưa duyệt
-    $pdo->prepare("DELETE FROM fuel_logs WHERE id = ? AND is_approved = FALSE")
+    $pdo->prepare("DELETE FROM fuel_logs WHERE id = ?")
         ->execute([$deleteId]);
     $_SESSION['flash'] = ['type'=>'success','msg'=>'🗑️ Đã xoá bản ghi xăng dầu.'];
     header('Location: '.$_SERVER['REQUEST_URI']); exit;
