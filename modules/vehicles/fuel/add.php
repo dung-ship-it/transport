@@ -276,7 +276,7 @@ include '../../../includes/sidebar.php';
                         </label>
                         <div class="input-group">
                             <input type="number" name="amount" id="amount"
-                                   class="form-control" step="1000"
+                                   class="form-control" step="1"
                                    placeholder="0"
                                    value="<?= $_POST['amount'] ?? '' ?>"
                                    oninput="calcStats()" required>
