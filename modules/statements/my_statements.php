@@ -374,6 +374,17 @@ tr.in-progress  { background:#fff8e1; }
 <div class="screen-toolbar">
     <button onclick="window.print()">🖨️ In bảng kê</button>
 
+    <a href="export_my_statements.php<?= '?' . http_build_query(array_filter([
+        'period'          => $period,
+        'month'           => $filterMonth,
+        'date_from'       => $dateFrom,
+        'date_to'         => $dateTo,
+        'filter_customer' => $filterCustId ?: null,
+        'filter_plate'    => $filterPlate  ?: null,
+    ])) ?>" class="tbtn" style="background:#198754;border-color:#198754">
+        📥 Xuất Excel
+    </a>
+
     <span class="tb-sep">|</span>
 
     <div style="display:flex;align-items:center;gap:6px;font-family:sans-serif">
