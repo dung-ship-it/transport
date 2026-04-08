@@ -382,6 +382,8 @@ tr.in-progress  { background:#fff8e1; }
         'filter_customer' => $filterCustId ?: null,
         'filter_plate'    => $filterPlate  ?: null,
     ])) ?>" class="tbtn" style="background:#198754;border-color:#198754">
+    <a href="javascript:void(0)" onclick="exportExcel()"
+       style="padding:7px 16px;border-radius:5px;border:1px solid #198754;background:#198754;color:#fff;text-decoration:none;font-size:13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-family:sans-serif">
         📥 Xuất Excel
     </a>
 
@@ -796,6 +798,12 @@ function applyCustom() {
 
 function applyFilters() {
     location.href = buildParams();
+}
+
+function exportExcel() {
+    const params = buildParams();
+    const qs = params.indexOf('?') !== -1 ? params.substring(params.indexOf('?')) : '';
+    window.location.href = 'export_excel.php' + qs;
 }
 </script>
 
